@@ -1,0 +1,28 @@
+button#boton {
+	background: #26c2ad;
+	border: none;
+	width: 90%;
+	margin: 0 auto;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+button#boton:hover {
+	background-color: #00494d;
+}
+button#boton > p {
+	color: #00474b;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 2em;
+	margin: 0;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition:    all 0.2s ease-out;
+	-o-transition:      all 0.2s ease-out;
+	transition:         all 0.2s ease-out;
+}
+button#boton:hover > p {
+	color: white;
+}

@@ -1,45 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
 :root {
 	--cyanOscuro: hsl(183, 100%, 15%);
 	--grisOscuro: hsl(186, 14%, 43%);
 	--griscyan: hsl(184, 14%, 56%);
-	--griscyanClaro: hsl(185, 41%, 84%)
+	--griscyanClaro: hsl(185, 41%, 84%);
 	--griscyanClaroClaro: hsl(189, 41%, 97%);
 	--blanco: hsl(0, 0%, 100%);
 }
 
 body {
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	font-family: 'Space Mono', monospace;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background-color: var(--griscyanClaro);
 }
 
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
-.cajas {
+main {
+	background-color: white;
+	width: 90%;
+	border-radius: 20px;
 	display: flex;
-}
-.caja {
-	width: 100px;
-	height: 100px;
-}
-.caja.cyanOscuro {
-	background: var( --cyanOscuro );
-}
-.caja.grisOscuro {
-	background: var( --grisOscuro );
-}
-.caja.griscyan {
-	background: var( --griscyan );
-}
-.caja.griscyanClaro {
-	background: var( --griscyanClaro );
-}
-.caja.griscyanClaroClaro {
-	background: var( --griscyanClaroClaro );
-}
-.caja.blanco {
-	background: var( --blanco );
+	flex-direction: column;
+	margin: 0 auto;
 }

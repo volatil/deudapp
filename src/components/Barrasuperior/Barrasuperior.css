@@ -1,0 +1,25 @@
+section#barrasuperior {
+	display: flex;
+}
+section#barrasuperior .caja {
+	width: 100%;
+	height: 10px;
+}
+section#barrasuperior .caja.cyanOscuro {
+	background: var( --cyanOscuro );
+}
+section#barrasuperior .caja.grisOscuro {
+	background: var( --grisOscuro );
+}
+section#barrasuperior .caja.griscyan {
+	background: var( --griscyan );
+}
+section#barrasuperior .caja.griscyanClaro {
+	background: var( --griscyanClaro );
+}
+section#barrasuperior .caja.griscyanClaroClaro {
+	background: var( --griscyanClaroClaro );
+}
+section#barrasuperior .caja.blanco {
+	background: var( --blanco );
+}

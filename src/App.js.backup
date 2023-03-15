@@ -1,0 +1,74 @@
+import { useState, useEffect } from "react";
+
+import { testBoton } from "./helpers/Helpers";
+
+import Barrasuperior from "./components/Barrasuperior/Barrasuperior";
+import Button from "./components/Button/Button";
+import Header from "./components/Header/Header";
+
+function Monto() {
+	const [monto, setmonto] = useState(0);
+
+	return (
+		<section id="monto">
+			<p>Monto</p>
+			<input type="number" defaultValue={monto} />
+		</section>
+	);
+}
+
+function AgregarPersona({
+	estadoagregar, estadonumerodepersonas, estadomensaje, elonclick,
+}) {
+	return (
+		<>
+			<p>Numero de personas: <span>{estadonumerodepersonas}</span></p>
+			{
+				estadoagregar && (
+					<input placeholder="Persona" type="text" />
+				)
+			}
+			<Button mensaje={estadomensaje} onclick={elonclick} />
+		</>
+	);
+}
+
+function App() {
+	const [numerodepersonas, setnumerodepersonas] = useState(0);
+	const [mensaje, setmensaje] = useState("Añadir Persona");
+	const [agregar, setagregar] = useState(false);
+
+	function cambioEstadoAgregarPersona() {
+		if ( agregar ) {
+			setagregar(false);
+		} else {
+			setagregar(true);
+		}
+	}
+
+	function cambioMensajeAgregarPersona() {
+		if ( agregar ) {
+			setmensaje("Añadir Persona");
+		} else {
+			setmensaje("Añadir");
+		}
+	}
+
+	return (
+		<>
+			<Barrasuperior />
+			<Header />
+			<main>
+				<Monto />
+				<AgregarPersona
+					estadoagregar={agregar}
+					estadonumerodepersonas={numerodepersonas}
+					estadomensaje={mensaje}
+					elonclick={() => { cambioEstadoAgregarPersona(); cambioMensajeAgregarPersona(); }}
+				/>
+			</main>
+		</>
+	);
+}
+
+export default App;
