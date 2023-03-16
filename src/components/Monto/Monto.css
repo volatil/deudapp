@@ -1,0 +1,39 @@
+section#monto {}
+section#monto > p {
+	margin: 0;
+	color: var(--cyanOscuro);
+}
+section#monto fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+section#monto fieldset::after {
+	content: "$";
+	color: var(--griscyan);
+	display: flex;
+	text-align: left;
+	z-index: 4;
+	position: absolute;
+	top: 0;
+	left: 0;
+	align-items: center;
+	width: 10%;
+	height: 100%;
+	font-size: 2em;
+	text-indent: 12px;
+}
+section#monto fieldset > input {
+	height: 50px;
+	border: none;
+	background-color: var(--input);
+	outline: none;
+	text-align: right;
+	width: 96%;
+	padding: 0 2%;
+	font-size: 2.2em;
+	color: var(--cyanOscuro);
+	font-family: 'Space Mono', monospace !important;
+	font-weight: 900;
+}

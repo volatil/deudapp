@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 :root {
-	--cyanOscuro: hsl(183, 100%, 15%);
-	--grisOscuro: hsl(186, 14%, 43%);
-	--griscyan: hsl(184, 14%, 56%);
-	--griscyanClaro: hsl(185, 41%, 84%);
-	--griscyanClaroClaro: hsl(189, 41%, 97%);
-	--blanco: hsl(0, 0%, 100%);
+	--cyanOscuro: #00494d;
+	--grisOscuro: #5e7a7d;
+	--griscyan: #7f9c9f;
+	--griscyanClaro: #c5e4e7;
+	--griscyanClaroClaro: #f4fafa;
+	--input: #f3f8fb;
 }
 
 body {
 	margin: 0;
-	font-family: 'Space Mono', monospace;
+	font-family: 'Space Mono', monospace !important;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background-color: var(--griscyanClaro);
@@ -19,9 +19,10 @@ body {
 
 main {
 	background-color: white;
-	width: 90%;
 	border-radius: 20px;
 	display: flex;
 	flex-direction: column;
-	margin: 0 auto;
+	margin: 20px auto 0;
+	width: 86%;
+	padding: 8% 6%;
 }

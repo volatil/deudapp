@@ -1,46 +1,26 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { puntearMonto } from "./helpers/Helpers";
 
 import Barrasuperior from "./components/Barrasuperior/Barrasuperior";
-import Button from "./components/Button/Button";
 import Header from "./components/Header/Header";
-
-// function cambiaMonto(params) {
-
-// }
-
-function Monto( props ) {
-	const { children, hola } = props;
-	const [monto, setmonto] = useState(false);
-
-	return (
-		<section id="monto">
-			<p>Monto a dividir</p>
-			<input
-				type="number"
-				value={monto}
-				onChange={(e) => {
-					const estadomonto = e.target.value;
-					const retorno = puntearMonto( estadomonto );
-					setmonto( retorno );
-				}}
-			/>
-			<h1>{monto}</h1>
-			<div>{children}</div>
-			<div>{hola}</div>
-		</section>
-	);
-}
+import Monto from "./components/Monto/Monto";
+import Button from "./components/Button/Button";
 
 function App() {
+	const [monto, setmonto] = useState("");
 	return (
 		<>
 			<Barrasuperior />
 			<Header />
 			<main>
-				<Monto hola="comova">
-					<h1>JEJEJEJE</h1>
+				<Monto>
+					<input
+						type="text"
+						placeholder="0"
+						value={monto}
+						onChange={(e) => { setmonto( puntearMonto(e.target.value) ); }}
+					/>
 				</Monto>
 				{/*
 					<section id="personas">
