@@ -6,15 +6,20 @@ import Barrasuperior from "./components/Barrasuperior/Barrasuperior";
 import Button from "./components/Button/Button";
 import Header from "./components/Header/Header";
 
-function Monto() {
-	const [monto, setmonto] = useState();
+// function cambiaMonto(params) {
+
+// }
+
+function Monto( props ) {
+	const { children, hola } = props;
+	const [monto, setmonto] = useState(false);
 
 	return (
 		<section id="monto">
 			<p>Monto a dividir</p>
 			<input
 				type="number"
-				value={monto || ""}
+				value={monto}
 				onChange={(e) => {
 					const estadomonto = e.target.value;
 					const retorno = puntearMonto( estadomonto );
@@ -22,6 +27,8 @@ function Monto() {
 				}}
 			/>
 			<h1>{monto}</h1>
+			<div>{children}</div>
+			<div>{hola}</div>
 		</section>
 	);
 }
@@ -32,7 +39,9 @@ function App() {
 			<Barrasuperior />
 			<Header />
 			<main>
-				<Monto />
+				<Monto hola="comova">
+					<h1>JEJEJEJE</h1>
+				</Monto>
 				{/*
 					<section id="personas">
 						<p>Numero de personas: <span>0</span></p>
